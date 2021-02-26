@@ -1,0 +1,10 @@
+|Entradas
+OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
+C => inst.IN0
+A => inst.IN1
+B => inst.IN2
+D => inst.IN3
+E => inst.IN4
+F => inst.IN5
+
+

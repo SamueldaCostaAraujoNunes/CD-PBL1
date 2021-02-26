@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, X:/samue/Projetos/CD/CD-PBL1/Entradas.bdf
+source_file = 1, X:/samue/Projetos/CD/CD-PBL1/db/Projeto.cbx.xml
+design_name = Entradas
+instance = comp, \E~I , E, Entradas, 1
+instance = comp, \F~I , F, Entradas, 1
+instance = comp, \B~I , B, Entradas, 1
+instance = comp, \D~I , D, Entradas, 1
+instance = comp, \A~I , A, Entradas, 1
+instance = comp, \C~I , C, Entradas, 1
+instance = comp, \inst~0 , inst~0, Entradas, 1
+instance = comp, \OUT~I , OUT, Entradas, 1
