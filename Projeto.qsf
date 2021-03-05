@@ -49,3 +49,16 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_location_assignment PIN_1 -to IN_A
+set_location_assignment PIN_4 -to IN_B
+set_location_assignment PIN_6 -to IN_C
+set_location_assignment PIN_8 -to IN_D
+set_location_assignment PIN_16 -to IN_E
+set_location_assignment PIN_18 -to IN_F
+set_location_assignment PIN_21 -to IN_G
+set_location_assignment PIN_27 -to IN_H
+set_location_assignment PIN_29 -to IN_I
+set_location_assignment PIN_5 -to IN_J
+set_location_assignment PIN_72 -to LOTE_ACEITO
+set_location_assignment PIN_86 -to LOTE_RECUSADO
+set_location_assignment PIN_74 -to LOTE_COMPROMETIDO
