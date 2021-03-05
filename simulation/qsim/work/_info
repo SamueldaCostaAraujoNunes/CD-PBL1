@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dX:/samue/Projetos/CD/CD-PBL1/simulation/qsim
 vEntradas
-Z1 !s110 1614865884
+Z1 !s110 1614977867
 !i10b 1
-!s100 4Qcdg_Fe1gnO3:agnl>?G0
-Io47O7Y5A:TKGGiiWAQo9<2
+!s100 LSQ5z9<fjDT:EgU@;1D8`2
+I[lOMdzH9[E@k:f4[Nia>21
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1614865883
+w1614977865
 8Projeto.vo
 FProjeto.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1614865884.000000
+Z4 !s108 1614977867.000000
 !s107 Projeto.vo|
 !s90 -work|work|Projeto.vo|
 !i113 1
@@ -33,11 +33,11 @@ n@entradas
 vEntradas_vlg_vec_tst
 R1
 !i10b 1
-!s100 a6I?kSmAnAITT52LU7D>F0
-ILbY5]X]m=Woz<Pf1G6^Gd0
+!s100 eZ]8<i7z>]cbc]QJHe_?72
+ICGK^giDPVE[7`AM>POznh1
 R2
 R0
-w1614865882
+w1614977864
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

@@ -1,5 +1,5 @@
 Fitter report for Projeto
-Fri Mar 05 16:25:29 2021
+Fri Mar 05 17:56:05 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,14 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Pin-Out File
-  6. Fitter Resource Usage Summary
-  7. Input Pins
-  8. Output Pins
-  9. I/O Bank Usage
- 10. All Package Pins
- 11. Output Pin Default Load For Reported TCO
- 12. I/O Assignment Warnings
+  5. Ignored Assignments
+  6. Pin-Out File
+  7. Fitter Resource Usage Summary
+  8. Input Pins
+  9. Output Pins
+ 10. I/O Bank Usage
+ 11. All Package Pins
+ 12. Output Pin Default Load For Reported TCO
  13. Fitter Resource Utilization by Entity
  14. Delay Chain Summary
  15. Routing Usage Summary
@@ -53,15 +53,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Fri Mar 05 16:25:29 2021       ;
+; Fitter Status         ; Successful - Fri Mar 05 17:56:05 2021       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; Projeto                                     ;
 ; Top-level Entity Name ; Entradas                                    ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 9 / 240 ( 4 % )                             ;
-; Total pins            ; 13 / 80 ( 16 % )                            ;
+; Total logic elements  ; 5 / 240 ( 2 % )                             ;
+; Total pins            ; 8 / 80 ( 10 % )                             ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -132,10 +132,23 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                    ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Location ;                ;              ; IN_F       ; PIN_18        ; QSF Assignment ;
+; Location ;                ;              ; IN_G       ; PIN_21        ; QSF Assignment ;
+; Location ;                ;              ; IN_H       ; PIN_27        ; QSF Assignment ;
+; Location ;                ;              ; IN_I       ; PIN_29        ; QSF Assignment ;
+; Location ;                ;              ; IN_J       ; PIN_5         ; QSF Assignment ;
++----------+----------------+--------------+------------+---------------+----------------+
+
+
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_files/Projeto.pin.
+The pin-out file can be found in X:/samue/Projetos/CD/CD-PBL1/output_files/Projeto.pin.
 
 
 +------------------------------------------------------------------+
@@ -143,20 +156,20 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Total logic elements                        ; 9 / 240 ( 4 % )    ;
-;     -- Combinational with no register       ; 9                  ;
+; Total logic elements                        ; 5 / 240 ( 2 % )    ;
+;     -- Combinational with no register       ; 5                  ;
 ;     -- Register only                        ; 0                  ;
 ;     -- Combinational with a register        ; 0                  ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 8                  ;
-;     -- 3 input functions                    ; 1                  ;
+;     -- 4 input functions                    ; 2                  ;
+;     -- 3 input functions                    ; 3                  ;
 ;     -- 2 input functions                    ; 0                  ;
 ;     -- 1 input functions                    ; 0                  ;
 ;     -- 0 input functions                    ; 0                  ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 9                  ;
+;     -- normal mode                          ; 5                  ;
 ;     -- arithmetic mode                      ; 0                  ;
 ;     -- qfbk mode                            ; 0                  ;
 ;     -- register cascade mode                ; 0                  ;
@@ -167,7 +180,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; Total LABs                                  ; 1 / 24 ( 4 % )     ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 13 / 80 ( 16 % )   ;
+; I/O pins                                    ; 8 / 80 ( 10 % )    ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )      ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
@@ -178,12 +191,12 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; Global signals                              ; 0                  ;
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 1.1% / 0.8% / 1.5% ;
-; Peak interconnect usage (total/H/V)         ; 1.1% / 0.8% / 1.5% ;
+; Average interconnect usage (total/H/V)      ; 1.3% / 1.4% / 1.2% ;
+; Peak interconnect usage (total/H/V)         ; 1.3% / 1.4% / 1.2% ;
 ; Maximum fan-out                             ; 3                  ;
 ; Highest non-global fan-out                  ; 3                  ;
-; Total fan-out                               ; 38                 ;
-; Average fan-out                             ; 1.73               ;
+; Total fan-out                               ; 20                 ;
+; Average fan-out                             ; 1.54               ;
 +---------------------------------------------+--------------------+
 
 
@@ -192,16 +205,11 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; IN_A ; 37    ; 1        ; 4            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_B ; 40    ; 1        ; 5            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_C ; 42    ; 1        ; 5            ; 0            ; 0           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_D ; 21    ; 1        ; 1            ; 1            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_E ; 36    ; 1        ; 4            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_F ; 17    ; 1        ; 1            ; 2            ; 3           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_G ; 34    ; 1        ; 3            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_H ; 18    ; 1        ; 1            ; 1            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_I ; 90    ; 2        ; 4            ; 5            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; IN_J ; 30    ; 1        ; 3            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; IN_A ; 1     ; 2        ; 2            ; 5            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; IN_B ; 4     ; 1        ; 1            ; 4            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; IN_C ; 6     ; 1        ; 1            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; IN_D ; 8     ; 1        ; 1            ; 3            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; IN_E ; 16    ; 1        ; 1            ; 2            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -210,20 +218,20 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; LOTE_ACEITO       ; 91    ; 2        ; 4            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; LOTE_COMPROMETIDO ; 38    ; 1        ; 4            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
-; LOTE_RECUSADO     ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; LOTE_ACEITO       ; 72    ; 2        ; 8            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; LOTE_COMPROMETIDO ; 74    ; 2        ; 8            ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; LOTE_RECUSADO     ; 86    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 11 / 38 ( 29 % ) ; 3.3V          ; --           ;
-; 2        ; 2 / 42 ( 5 % )   ; 3.3V          ; --           ;
-+----------+------------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 4 / 38 ( 11 % ) ; 3.3V          ; --           ;
+; 2        ; 4 / 42 ( 10 % ) ; 3.3V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -231,14 +239,14 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 +----------+------------+----------+-------------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage    ; Dir.   ; I/O Standard ; Voltage   ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+-------------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
-; 1        ; 83         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 1        ; 83         ; 2        ; IN_A              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 2        ; 0          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 3        ; 1          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 4        ; 2          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 4        ; 2          ; 1        ; IN_B              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 5        ; 3          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 6        ; 4          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 6        ; 4          ; 1        ; IN_C              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 7        ; 5          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 8        ; 6          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 8        ; 6          ; 1        ; IN_D              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 9        ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GNDIO             ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 11       ;            ;          ; GNDINT            ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
@@ -246,12 +254,12 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; 13       ;            ;          ; VCCINT            ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 14       ; 8          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 15       ; 9          ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 16       ; 10         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 17       ; 11         ; 1        ; IN_F              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 18       ; 12         ; 1        ; IN_H              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 16       ; 10         ; 1        ; IN_E              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
+; 17       ; 11         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 18       ; 12         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 19       ; 13         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 20       ; 14         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 21       ; 15         ; 1        ; IN_D              ; input  ; 3.3-V LVTTL  ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 15         ; 1        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 22       ; 16         ; 1        ; #TMS              ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 23       ; 17         ; 1        ; #TDI              ; input  ;              ;           ; --         ;                 ; --       ; --           ;
 ; 24       ; 18         ; 1        ; #TCK              ; input  ;              ;           ; --         ;                 ; --       ; --           ;
@@ -260,19 +268,19 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; 27       ; 21         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 28       ; 22         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 29       ; 23         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 30       ; 24         ; 1        ; IN_J              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 30       ; 24         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 31       ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 32       ;            ;          ; GNDIO             ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 33       ; 25         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 34       ; 26         ; 1        ; IN_G              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 34       ; 26         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 35       ; 27         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 36       ; 28         ; 1        ; IN_E              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 37       ; 29         ; 1        ; IN_A              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 38       ; 30         ; 1        ; LOTE_COMPROMETIDO ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 39       ; 31         ; 1        ; LOTE_RECUSADO     ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 40       ; 32         ; 1        ; IN_B              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 36       ; 28         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 37       ; 29         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 38       ; 30         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 39       ; 31         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 40       ; 32         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 41       ; 33         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 42       ; 34         ; 1        ; IN_C              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 43       ; 35         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 44       ; 36         ; 1        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
@@ -302,9 +310,9 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; 69       ; 55         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 70       ; 56         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 71       ; 57         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 72       ; 58         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 72       ; 58         ; 2        ; LOTE_ACEITO       ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 73       ; 59         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 74       ; 60         ; 2        ; GND*              ;        ;              ;           ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 60         ; 2        ; LOTE_COMPROMETIDO ; output ; 3.3-V LVTTL  ;           ; Row I/O    ; Y               ; no       ; Off          ;
 ; 75       ; 61         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 76       ; 62         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 77       ; 63         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
@@ -316,12 +324,12 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_fil
 ; 83       ; 67         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 84       ; 68         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 85       ; 69         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 86       ; 70         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 86       ; 70         ; 2        ; LOTE_RECUSADO     ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 87       ; 71         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 88       ; 72         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 89       ; 73         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 90       ; 74         ; 2        ; IN_I              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 91       ; 75         ; 2        ; LOTE_ACEITO       ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 90       ; 74         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 91       ; 75         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 92       ; 76         ; 2        ; GND*              ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO             ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2            ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
@@ -351,33 +359,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-------------------------------------------------+
-; I/O Assignment Warnings                         ;
-+-------------------+-----------------------------+
-; Pin Name          ; Reason                      ;
-+-------------------+-----------------------------+
-; LOTE_COMPROMETIDO ; Missing location assignment ;
-; LOTE_ACEITO       ; Missing location assignment ;
-; LOTE_RECUSADO     ; Missing location assignment ;
-; IN_I              ; Missing location assignment ;
-; IN_A              ; Missing location assignment ;
-; IN_G              ; Missing location assignment ;
-; IN_B              ; Missing location assignment ;
-; IN_F              ; Missing location assignment ;
-; IN_C              ; Missing location assignment ;
-; IN_J              ; Missing location assignment ;
-; IN_H              ; Missing location assignment ;
-; IN_E              ; Missing location assignment ;
-; IN_D              ; Missing location assignment ;
-+-------------------+-----------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                              ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |Entradas                  ; 9 (9)       ; 0            ; 0          ; 13   ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas           ; Entradas    ; work         ;
+; |Entradas                  ; 5 (5)       ; 0            ; 0          ; 8    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas           ; Entradas    ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -390,16 +377,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LOTE_COMPROMETIDO ; Output   ; --            ;
 ; LOTE_ACEITO       ; Output   ; --            ;
 ; LOTE_RECUSADO     ; Output   ; --            ;
-; IN_I              ; Input    ; (1)           ;
-; IN_A              ; Input    ; (1)           ;
-; IN_G              ; Input    ; (1)           ;
 ; IN_B              ; Input    ; (1)           ;
-; IN_F              ; Input    ; (1)           ;
 ; IN_C              ; Input    ; (1)           ;
-; IN_J              ; Input    ; (1)           ;
-; IN_H              ; Input    ; (1)           ;
-; IN_E              ; Input    ; (1)           ;
+; IN_A              ; Input    ; (1)           ;
 ; IN_D              ; Input    ; (1)           ;
+; IN_E              ; Input    ; (1)           ;
 +-------------------+----------+---------------+
 
 
@@ -408,30 +390,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------+
 ; Routing Resource Type ; Usage             ;
 +-----------------------+-------------------+
-; C4s                   ; 10 / 784 ( 1 % )  ;
+; C4s                   ; 7 / 784 ( < 1 % ) ;
 ; Direct links          ; 0 / 888 ( 0 % )   ;
 ; Global clocks         ; 0 / 4 ( 0 % )     ;
 ; LAB clocks            ; 0 / 32 ( 0 % )    ;
 ; LUT chains            ; 0 / 216 ( 0 % )   ;
-; Local interconnects   ; 13 / 888 ( 1 % )  ;
-; R4s                   ; 4 / 704 ( < 1 % ) ;
+; Local interconnects   ; 8 / 888 ( < 1 % ) ;
+; R4s                   ; 7 / 704 ( < 1 % ) ;
 +-----------------------+-------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.00) ; Number of LABs  (Total = 1) ;
+; Number of Logic Elements  (Average = 5.00) ; Number of LABs  (Total = 1) ;
 +--------------------------------------------+-----------------------------+
 ; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
 ; 3                                          ; 0                           ;
 ; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
+; 5                                          ; 1                           ;
 ; 6                                          ; 0                           ;
 ; 7                                          ; 0                           ;
 ; 8                                          ; 0                           ;
-; 9                                          ; 1                           ;
+; 9                                          ; 0                           ;
 ; 10                                         ; 0                           ;
 +--------------------------------------------+-----------------------------+
 
@@ -439,18 +421,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced  (Average = 5.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
-; 5                                           ; 0                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 1                           ;
+; 5                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -466,23 +444,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+-----------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 1) ;
-+----------------------------------------------+-----------------------------+
-; 0                                            ; 0                           ;
-; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
-; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
-+----------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 5.00) ; Number of LABs  (Total = 1) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 1                           ;
++---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -515,7 +488,6 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device EPM570T100C5 is compatible
     Info (176445): Device EPM570T100I5 is compatible
     Info (176445): Device EPM570T100A5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 13 pins of 13 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Projeto.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -530,14 +502,13 @@ Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 13 (unused VREF, 3.3V VCCIO, 10 input, 3 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  38 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  42 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "IN_F" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IN_G" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IN_H" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IN_I" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IN_J" is assigned to location or region, but does not exist in design
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -551,20 +522,21 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/projetos/pbl1/output_files/Projeto.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4970 megabytes
-    Info: Processing ended: Fri Mar 05 16:25:29 2021
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:04
+Info (144001): Generated suppressed messages file X:/samue/Projetos/CD/CD-PBL1/output_files/Projeto.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 5061 megabytes
+    Info: Processing ended: Fri Mar 05 17:56:05 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/18.1/projetos/pbl1/output_files/Projeto.fit.smsg.
+The suppressed messages can be found in X:/samue/Projetos/CD/CD-PBL1/output_files/Projeto.fit.smsg.
 
 

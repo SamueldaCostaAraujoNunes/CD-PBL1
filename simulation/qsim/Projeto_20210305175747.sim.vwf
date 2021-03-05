@@ -1,54 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Projeto -c Projeto --vector_source="X:/samue/Projetos/CD/CD-PBL1/Waveform.vwf" --testbench_file="X:/samue/Projetos/CD/CD-PBL1/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Projeto -c Projeto --vector_source="X:/samue/Projetos/CD/CD-PBL1/Waveform.vwf" --testbench_file="X:/samue/Projetos/CD/CD-PBL1/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="X:/samue/Projetos/CD/CD-PBL1/simulation/qsim/" Projeto -c Projeto</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="X:/samue/Projetos/CD/CD-PBL1/simulation/qsim/" Projeto -c Projeto</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work Projeto.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Entradas_vlg_vec_tst
-vcd file -direction Projeto.msim.vcd
-vcd add -internal Entradas_vlg_vec_tst/*
-vcd add -internal Entradas_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work Projeto.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Entradas_vlg_vec_tst
-vcd file -direction Projeto.msim.vcd
-vcd add -internal Entradas_vlg_vec_tst/*
-vcd add -internal Entradas_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -168,11 +117,15 @@ TRANSITION_LIST("IN_A")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 110.0;
-		LEVEL 0 FOR 500.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 200.0;
+			LEVEL 1 FOR 110.0;
+			LEVEL 0 FOR 500.0;
+		}
 	}
 }
 
@@ -181,11 +134,15 @@ TRANSITION_LIST("IN_B")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 170.0;
-		LEVEL 0 FOR 440.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 180.0;
+			LEVEL 1 FOR 170.0;
+			LEVEL 0 FOR 440.0;
+		}
 	}
 }
 
@@ -194,11 +151,15 @@ TRANSITION_LIST("IN_C")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 260.0;
-		LEVEL 0 FOR 350.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 260.0;
+			LEVEL 0 FOR 350.0;
+		}
 	}
 }
 
@@ -207,11 +168,15 @@ TRANSITION_LIST("IN_D")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 260.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 260.0;
-		LEVEL 0 FOR 350.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 260.0;
+			LEVEL 0 FOR 100.0;
+			LEVEL 1 FOR 260.0;
+			LEVEL 0 FOR 350.0;
+		}
 	}
 }
 
@@ -220,13 +185,17 @@ TRANSITION_LIST("IN_E")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 170.0;
-		LEVEL 1 FOR 330.0;
-		LEVEL 0 FOR 280.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 90.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 170.0;
+			LEVEL 1 FOR 330.0;
+			LEVEL 0 FOR 280.0;
+		}
 	}
 }
 
@@ -235,7 +204,17 @@ TRANSITION_LIST("LOTE_ACEITO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 90.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 200.0;
+			LEVEL 1 FOR 110.0;
+			LEVEL 0 FOR 500.0;
+		}
 	}
 }
 
@@ -244,7 +223,19 @@ TRANSITION_LIST("LOTE_COMPROMETIDO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 90.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 290.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 440.0;
+		}
 	}
 }
 
@@ -253,7 +244,15 @@ TRANSITION_LIST("LOTE_RECUSADO")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 180.0;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 170.0;
+			LEVEL 1 FOR 440.0;
+		}
 	}
 }
 
