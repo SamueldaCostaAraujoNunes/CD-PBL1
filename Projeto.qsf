@@ -62,3 +62,4 @@ set_location_assignment PIN_5 -to IN_J
 set_location_assignment PIN_72 -to LOTE_ACEITO
 set_location_assignment PIN_86 -to LOTE_RECUSADO
 set_location_assignment PIN_74 -to LOTE_COMPROMETIDO
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
