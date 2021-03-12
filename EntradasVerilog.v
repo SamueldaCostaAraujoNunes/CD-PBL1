@@ -16,7 +16,7 @@
 // VERSION		"Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 // CREATED		"Fri Mar 12 13:45:14 2021"
 
-module Entradas(
+module EntradasVerilog(
 	IN_A,
 	IN_B,
 	IN_C,

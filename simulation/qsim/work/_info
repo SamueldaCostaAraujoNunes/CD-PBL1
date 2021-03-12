@@ -9,26 +9,26 @@ z2
 cModel Technology
 Z0 dX:/samue/Projetos/CD/CD-PBL1/simulation/qsim
 vEntradas
-Z1 !s110 1615411310
+Z1 !s110 1615568790
 !i10b 1
 !s100 edc=STnV`5fJHL7DAoS1@2
 I]@DLP4j7l;Dm35N4z]li@0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1615411308
-8Projeto.vo
-FProjeto.vo
-L0 31
-Z3 OV;L;10.5b;63
+w1615568789
+Z3 8Projeto.vo
+Z4 FProjeto.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1615411310.000000
-!s107 Projeto.vo|
-!s90 -work|work|Projeto.vo|
+Z7 !s108 1615568790.000000
+Z8 !s107 Projeto.vo|
+Z9 !s90 -work|work|Projeto.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z10 o-work work
+Z11 tCvgOpt 0
 n@entradas
 vEntradas_vlg_vec_tst
 R1
@@ -37,18 +37,62 @@ R1
 Iz1Rd;B_Xz;E6XP8UBQd5S0
 R2
 R0
-w1615411306
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
-L0 29
-R3
+w1615568788
+Z12 8Waveform1.vwf.vt
+Z13 FWaveform1.vwf.vt
+Z14 L0 29
+R6
 r1
 !s85 0
 31
-R4
+R7
 !s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+Z15 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
+R10
+R11
+n@entradas_vlg_vec_tst
+vEntradasVerilog
+Z16 !s110 1615568495
+!i10b 1
+!s100 :ND6HJKi=nNHW6J68RAVZ0
+ID`J[1XSIVTCLzM``WFbAD0
+R2
+R0
+w1615568488
+R3
+R4
 R5
 R6
-n@entradas_vlg_vec_tst
+r1
+!s85 0
+31
+!s108 1615568494.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@entradas@verilog
+vEntradasVerilog_vlg_vec_tst
+R16
+!i10b 1
+!s100 I>E<R7@^AUcB80H2DHWY32
+I];SQfRH1@O6<A]C<ac[aG2
+R2
+R0
+w1615568487
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+!s108 1615568495.000000
+!s107 Waveform1.vwf.vt|
+R15
+!i113 1
+R10
+R11
+n@entradas@verilog_vlg_vec_tst
