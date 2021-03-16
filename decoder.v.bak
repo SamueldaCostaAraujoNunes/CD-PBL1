@@ -1,0 +1,45 @@
+// decodificador que recebe as saídas do circuito principal
+// e as transforma em sinais para o display de 7-seguimentos
+// e o buzzer sonoro
+module decoder(
+	aceito,
+	comprometido,
+	recusado,
+	sel,
+	seguimentos,
+	sound_buzzer
+);
+
+	// declaracao das entradas e saídas
+	input aceito,  comprometido, recusado;
+	output seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g, buzzer;
+	
+	reg sel[2:0];
+	reg [6:0] seguimentos;
+	reg [0:0] sound_buzzer;
+	
+	assign sel = aceito, comprometido, recusado;
+	
+	// logica
+	
+	always(sel)
+	begin
+	
+		case(sel)
+			3'b100 : seguimentos = 7'b1110111; // mensagem aceito (letra "A")
+			3'b010 : seguimentos = 7'b1001110; // mensarem comprometido (letra "C")
+			3'b001 : seguimentos = 7'b0000101; // mensagem recusado (letra "r")
+			default: seguimentos = 7'b0000000;
+		endcase
+		
+		case(sel)
+			3'b001 : sound_buzzer = 1'b1; // sinal sonoro para o caso recusado
+			default: sound_buzzer = 1'b0;
+		endcase
+	end
+	
+	assign {seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g} = seguimentos;
+	assign buzzer = sound_buzzer;
+
+	endmodule
+	

@@ -1,0 +1,17 @@
+module comprometido(a, b, c, d, e, out);
+	// declaracao das entradas e saidas
+	input a, b, c, d, e;
+	output out;
+	wire out_and1, out_and2, out_and3, out_and4, out_and5;
+	
+	// logica
+	and and1 = (out_and1, ~a, b, c, d, e);
+	and and2 = (out_and2, a, ~b, c, d, e);
+	and and3 = (out_and3, a, b, ~c, d, e);
+	and and4 = (out_and4, a, b, c, ~d, e);
+	and and5 = (out_and5, a, b, c, d, ~e);
+	
+	assign out = out_and1 | out_and2 | out_and3 | out_and4 | out_and5;
+	// um lote comprometido apenas uma entrada em nível lógico baixo
+	// e as outras em nível lógico alto
+endmodule
