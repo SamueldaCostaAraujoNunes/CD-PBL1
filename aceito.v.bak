@@ -1,0 +1,9 @@
+module aceito(a, b, c, d, e, out);
+	// declaracao das entradas e saidas
+	input a, b, c, d, e;
+	output out;
+	
+	// logica
+	assign out = a & b & c & d & e;
+	// um lote aceito possui todas as entradas em nível lógico alto
+endmodule

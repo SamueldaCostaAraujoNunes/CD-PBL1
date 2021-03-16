@@ -1,0 +1,10 @@
+module recusado(aceito, comprometido, out);
+	// declaracao das entradas e saidas
+	input aceito, comprometido;
+	output out;
+	
+	//logica
+	assign out = ~aceito & ~comprometido;
+		// um lote rejeitado pode ser identificado caso os sinais do
+		// circuito de aceito e rejeitado possuam nível lógico baixo
+endmodule

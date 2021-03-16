@@ -1,0 +1,27 @@
+module main(
+	in_a,
+	in_b,
+	in_c,
+	in_d,
+	in_e,
+	lote_aceito,
+	lote_comprometido,
+	lote_recusado
+);
+
+	// declaracao das entradas e saidas
+	input in_a, in_b, in_c, in_d, in_e;
+	output lote_aceito, lote_comprometido, lote_recusado;
+
+	// declaracao dos wires
+	wire aceito_recusado, comprometido_recusado;
+	
+	// logica
+	assign aceito_recusado = lote_aceito;
+	assign comprometido_recusado = lote_comprometido;
+	
+	assign lote_aceito = aceito(in_a, in_b, in_c, in_d, in_e, lote_aceito);
+	assign lote_comprometido = comprometido(n_a, in_b, in_c, in_d, in_e, lote_comprometido);
+	assign lote_recusado = recusado(aceito_recusado, comprometido_recusado, lote_recusado);
+
+endmodule
